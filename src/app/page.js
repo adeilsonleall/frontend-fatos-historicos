@@ -9,7 +9,7 @@ export default function Home() {
 
   const fetchFact = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080?fato=${year}`); 
+      const response = await axios.get(`https://backend-fatos-historicos.vercel.app/?fato=${year}`); 
       setFact(response.data.fato);
     } catch (error) { if (error.response) { // O servidor respondeu com um status diferente de 2xx 
       if (error.response.status === 400) { 
